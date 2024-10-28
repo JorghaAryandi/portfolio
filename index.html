@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Jorgha Akram Aryandi" />
+    <title>Portfolio - Jorgha Akram Aryandi</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- aos -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Canvas 3D -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader"></div>
+    </div>
+
+    <main id="mainContent" style="display: none">
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="bootstrap" viewBox="0 0 512 408" fill="currentcolor">
+          <path
+            d="M106.342 0c-29.214 0-50.827 25.58-49.86 53.32.927 26.647-.278 61.165-8.966 89.31C38.802 170.862 24.07 188.707 0 191v26c24.069 2.293 38.802 20.138 47.516 48.37 8.688 28.145 9.893 62.663 8.965 89.311C55.515 382.42 77.128 408 106.342 408h299.353c29.214 0 50.827-25.58 49.861-53.319-.928-26.648.277-61.166 8.964-89.311 8.715-28.232 23.411-46.077 47.48-48.37v-26c-24.069-2.293-38.765-20.138-47.48-48.37-8.687-28.145-9.892-62.663-8.964-89.31C456.522 25.58 434.909 0 405.695 0H106.342zm236.559 251.102c0 38.197-28.501 61.355-75.798 61.355h-87.202a2 2 0 01-2-2v-213a2 2 0 012-2h86.74c39.439 0 65.322 21.354 65.322 54.138 0 23.008-17.409 43.61-39.594 47.219v1.203c30.196 3.309 50.532 24.212 50.532 53.085zm-84.58-128.125h-45.91v64.814h38.669c29.888 0 46.373-12.03 46.373-33.535 0-20.151-14.174-31.279-39.132-31.279zm-45.91 90.53v71.431h47.605c31.12 0 47.605-12.482 47.605-35.941 0-23.46-16.947-35.49-49.608-35.49h-45.602z"
+          />
+        </symbol>
+        <symbol id="check2" viewBox="0 0 16 16">
+          <path
+            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+          />
+        </symbol>
+        <symbol id="circle-half" width="16" height="16" viewBox="0 0 20 20">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" width="16" height="16" viewBox="0 0 20 20">
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+          />
+          <path
+            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+          />
+        </symbol>
+        <symbol id="sun-fill" width="16" height="16" viewBox="0 0 20 20">
+          <path
+            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </symbol>
+      </svg>
+
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
+        <div class="container px-5">
+          <a class="navbar-brand fw-bold" href="#Home">JAA</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi-list"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link me-lg-3" href="#Services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-lg-3" href="#Portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-lg-3" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-lg-3" href="#Team">Team</a>
+              </li>
+              <li class="nav-item dropdown color-modes list-unstyled">
+                <button
+                  class="btn nav-link-theme dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  data-bs-display="static"
+                >
+                  <svg class="bi my-1 theme-icon-active" width="16" height="16">
+                    <use href="#circle-half"></use>
+                  </svg>
+                  <span class="" id="bd-theme-text"></span>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="bd-theme"
+                  style="--bs-dropdown-min-width: 8rem"
+                >
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="light"
+                    >
+                      <svg
+                        class="bi me-2 opacity-50 theme-icon"
+                        width="16"
+                        height="16"
+                      >
+                        <use href="#sun-fill"></use>
+                      </svg>
+                      Light
+                      <svg class="bi ms-auto d-none" width="16" height="16">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="dark"
+                    >
+                      <svg
+                        class="bi me-2 opacity-50 theme-icon"
+                        width="16"
+                        height="16"
+                      >
+                        <use href="#moon-stars-fill"></use>
+                      </svg>
+                      Dark
+                      <svg class="bi ms-auto d-none" width="16" height="16">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center active"
+                      data-bs-theme-value="auto"
+                    >
+                      <svg
+                        class="bi me-2 opacity-50 theme-icon"
+                        width="16"
+                        height="16"
+                      >
+                        <use href="#circle-half"></use>
+                      </svg>
+                      Auto
+                      <svg class="bi ms-auto d-none" width="16" height="16">
+                        <use href="#check2"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a
+              href="#Contact"
+              class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
+            >
+              <span class="d-flex align-items-center">
+                <i class="bi-chat-text-fill me-2"></i>
+                <span class="small">Contact Us</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Home -->
+      <section
+        id="Home"
+        class="d-flex align-items-center banner"
+        data-aos="fade-up"
+      >
+        <!-- Jumbotron -->
+        <div class="container px-5">
+          <div
+            class="row gx-5 align-items-center justify-content-center text-white text-center h-100"
+          >
+            <div class="col-12 col-md-8 col-lg-10">
+              <h1
+                class="display-4"
+                data-aos="fade-down"
+                data-aos-duration="500"
+              >
+                Hi, I'm Jorgha Akram Aryandi!
+              </h1>
+              <p
+                class="lead fw-bold"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                Frontend Engineer | Web Developer | Computer Engineering Student
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <a
+                  class="btn btn-primary btn-md px-4 me-sm-3"
+                  href="#Services"
+                  data-aos="zoom-in"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="Services">
+        <div class="container px-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-12">
+              <div class="container px-5">
+                <h2 class="text-center mb-5">Services</h2>
+                <div class="row gx-5 mb-5">
+                  <div
+                    class="col-md-4 mb-5"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                  >
+                    <div class="text-center">
+                      <i
+                        class="bi-laptop icon-feature text-gradient d-block mb-3"
+                      ></i>
+                      <h3 class="font-alt">Web Developer</h3>
+                      <p class="text-muted mb-0">
+                        Developing responsive and dynamic websites using the
+                        latest web technologies.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-4 mb-5"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                  >
+                    <div class="text-center">
+                      <i
+                        class="bi-file-code icon-feature text-gradient d-block mb-3"
+                      ></i>
+                      <h3 class="font-alt">Java Programming</h3>
+                      <p class="text-muted mb-0">
+                        Developing applications using Object-Oriented
+                        Programming (OOP) approach with Java.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-4 mb-5"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                  >
+                    <div class="text-center">
+                      <i
+                        class="bi-code-slash icon-feature text-gradient d-block mb-3"
+                      ></i>
+                      <h3 class="font-alt">Data Analyst</h3>
+                      <p class="text-muted mb-0">
+                        Analyzing and interpreting complex data to support
+                        business decision-making and optimize operations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technologies Section -->
+          <div class="container text-center mt-5">
+            <h2 class="mb-5">Tech Stack</h2>
+            <div class="row gx-5 justify-content-center">
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/html.png"
+                  alt="HTML"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">HTML</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/css.png"
+                  alt="CSS"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">CSS</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/bootstrap.png"
+                  alt="Bootstrap"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">Bootstrap</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/php.png"
+                  alt="PHP"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">PHP</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/codeigniter.png"
+                  alt="CodeIgniter"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">CodeIgniter</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/laravel.png"
+                  alt="Laravel"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">Laravel</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/vue.png"
+                  alt="Vue.js"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">Vue.js</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/typescript.png"
+                  alt="TypeScript"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">TypeScript</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/java.png"
+                  alt="Java"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">Java</p>
+              </div>
+              <div
+                class="col-md-2 col-4 text-center mb-4"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <img
+                  src="img/tech/python.png"
+                  alt="Python"
+                  class="img-fluid"
+                  style="max-width: 70%; height: auto"
+                />
+                <p class="text-muted">Python</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section
+        class="py-5"
+        style="background-color: var(--bs-tertiary-bg)"
+        id="Portfolio"
+      >
+        <div class="container px-5">
+          <div class="">
+            <div class="row text-center mb-4">
+              <div class="col">
+                <h2>Portfolio</h2>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-stretch">
+              <!-- Project Card -->
+              <div class="col-lg-4 col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/E-Commerce.png"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+
+                  <div class="card-body">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      Web
+                    </div>
+                    <h5 class="card-title fw-bolder">E-Commerce</h5>
+                    <p class="card-text">
+                      This E-Commerce project is developed using Vue.js,
+                      leveraging data from an API to create a dynamic and
+                      responsive shopping experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Card -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/Countries App.png"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+                  <div class="card-body">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      Web
+                    </div>
+                    <h5 class="card-title fw-bolder">Countries App</h5>
+                    <p class="card-text">
+                      The Countries App is an interactive web application built
+                      with Vue.js that offers detailed information about
+                      countries worldwide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Card -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/statgeo.png"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+                  <div class="card-body">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      Web
+                    </div>
+                    <h5 class="card-title fw-bolder">
+                      Earthquake Database Website for BMKG Stasiun Geofisika
+                      Banjarnegara
+                    </h5>
+                    <p class="card-text">
+                      This project involves collaboration with student interns
+                      from the BMKG Banjarnegara Geophysics Station. This
+                      website development is being carried out using the
+                      Codeigniter 3 framework.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Card -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/ceritanya.png"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+                  <div class="card-body">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      Web
+                    </div>
+                    <h5 class="card-title fw-bolder">
+                      Concert Ticket Sales Website for Telkom Radio
+                    </h5>
+                    <p class="card-text">
+                      This project involves the development of a concert ticket
+                      sales website using the CodeIgniter 3 framework.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Card -->
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/ask-me.jpg"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+                  <div class="card-body">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      Web
+                    </div>
+                    <h5 class="card-title fw-bolder">ASK-ME</h5>
+                    <p class="card-text">
+                      ASK-ME stands for "Assessment and Counseling For
+                      Self-Knowledge and Empowerment"
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 mb-4"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="card shadow-lg h-100">
+                  <img
+                    src="img/Java Apps.png"
+                    class="card-img-top"
+                    alt="Project Image"
+                    width="200"
+                    height="200"
+                  />
+                  <div class="card-body" id="cardBody">
+                    <div
+                      class="badge bg-primary bg-gradient rounded-pill mb-2 mt-2"
+                    >
+                      App
+                    </div>
+                    <h5 class="card-title fw-bolder">Point of Sales</h5>
+                    <p class="card-text">
+                      The Point of Sales (POS) application was developed using
+                      Java and built in the NetBeans environment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="About" class="py-5">
+        <div class="container px-5 my-5">
+          <div class="row gx-5 align-items-center">
+            <div
+              class="col-lg-6 order-first order-lg-last"
+              data-aos="fade-left"
+            >
+              <div class="position-relative" style="height: 400px">
+                <spline-viewer
+                  loading-anim-type="spinner-small-light"
+                  url="https://prod.spline.design/ylcUxx1OmciAfDmH/scene.splinecode"
+                  class="h-100 w-100"
+                  data-aos="fade-up"
+                  data-aos-once="true"
+                  data-aos-offset="200"
+                  style="max-width: 100%; max-height: 100%"
+                ></spline-viewer>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2 class="fw-bolder">About Us</h2>
+              <p class="lead fw-normal text-muted mb-0">
+                We are a dedicated team of professionals committed to delivering
+                innovative solutions and exceptional services in the field of
+                technology. Our mission is to empower businesses and individuals
+                through cutting-edge software applications and user-centric
+                designs. With a focus on quality and customer satisfaction, we
+                strive to create meaningful experiences that drive growth and
+                efficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tim -->
+      <section
+        id="Team"
+        class="py-5"
+        style="background-color: var(--bs-tertiary-bg)"
+      >
+        <div class="container px-5 my-5">
+          <div class="text-center">
+            <h2 class="fw-bolder">Our Team</h2>
+            <p class="lead fw-normal text-muted mb-5">
+              Dedicated to quality and your success
+            </p>
+          </div>
+          <div
+            class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center"
+          >
+            <div
+              class="col mb-5 mb-xl-0"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              <div class="text-center">
+                <img
+                  class="img-fluid rounded-circle mb-4 px-4"
+                  src="img/JAA.jpg"
+                  alt="Jorgha Akram Aryandi"
+                />
+                <h5 class="fw-bolder">Jorgha Akram Aryandi</h5>
+                <div class="fst-italic text-muted mb-2">Programmer</div>
+                <a
+                  class="btn btn-dark btn-social"
+                  href="https://www.instagram.com/jorghaaryandi"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-dark btn-social"
+                  href="https://www.linkedin.com/in/jorghaaryandi/"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- You can add more team members below with the same structure -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Client -->
+      <section id="Client">
+        <div class="py-5">
+          <div class="container">
+            <div class="text-center">
+              <h2 class="section-heading text-uppercase">Our Client</h2>
+            </div>
+            <div class="row justify-content-center align-items-center">
+              <div
+                class="col-8 col-md-3 col-sm-6 my-3"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <a href="#!">
+                  <img
+                    class="img-fluid img-brand d-block mx-auto"
+                    src="img/BUMA.png"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div
+                class="col-8 col-md-3 col-sm-6 my-3"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <a href="#!">
+                  <img
+                    class="img-fluid img-brand d-block mx-auto"
+                    src="img/BTECH.png"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div
+                class="col-8 col-md-3 col-sm-6 my-3"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <a href="#!">
+                  <img
+                    class="img-fluid img-brand d-block mx-auto"
+                    src="img/logo.png"
+                    alt="..."
+                  />
+                </a>
+              </div>
+              <div
+                class="col-8 col-md-3 col-sm-6 my-3"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
+                <a href="#!">
+                  <img
+                    class="img-fluid img-brand d-block mx-auto"
+                    src="img/logo3.jpg"
+                    alt="..."
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="Contact"
+        style="background-color: var(--bs-tertiary-bg)"
+        data-aos="fade-in"
+      >
+        <div class="container" data-aos="fade-in">
+          <!-- Contact form-->
+          <div class="row justify-content-center" data-aos="fade-in">
+            <div
+              class="col-10 col-md-8 d-flex flex-column align-items-center justify-content-center"
+              data-aos="fade-in"
+            >
+              <div class="row mb-3" data-aos="fade-in">
+                <div class="col text-center">
+                  <h2>Contact</h2>
+                </div>
+              </div>
+              <form id="contactForm" class="w-100" data-aos="fade-in">
+                <!-- Name input-->
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name..."
+                    data-sb-validations="required"
+                    data-sb-can-submit="no"
+                  />
+                  <label for="name">Full name</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A name is required.
+                  </div>
+                </div>
+                <!-- Email address input-->
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    data-sb-validations="required,email"
+                    data-sb-can-submit="no"
+                  />
+                  <label for="email">Email address</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="email:required"
+                  >
+                    An email is required.
+                  </div>
+                  <div class="invalid-feedback" data-sb-feedback="email:email">
+                    Email is not valid.
+                  </div>
+                </div>
+                <!-- Message input-->
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    placeholder="Enter your message here..."
+                    style="height: 10rem"
+                    data-sb-validations="required"
+                    data-sb-can-submit="no"
+                  ></textarea>
+                  <label for="message">Message</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="message:required"
+                  >
+                    A message is required.
+                  </div>
+                </div>
+                <!-- Submit Button-->
+                <div class="d-grid">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    id="submitButton"
+                    type="button"
+                    onclick="sendToWhatsApp()"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer-->
+      <footer class="bg-dark text-center py-3">
+        <div class="container px-5">
+          <div class="row">
+            <div class="col text-center">
+              <div class="small m-0 text-white">
+                Copyright © Jorgha Akram Aryandi 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
